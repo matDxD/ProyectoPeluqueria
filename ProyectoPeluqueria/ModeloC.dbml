@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BDpeluqueria" Class="ModeloCDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.cliente" Member="cliente">
+    <Type Name="cliente">
+      <Column Name="cedulac" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="numero" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="correo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.actualizarClientes" Method="actualizarClientes">
+    <Parameter Name="cedulac" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="numero" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="correo" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.buscarClientes" Method="buscarClientes">
+    <Parameter Name="cedulac" Type="System.Int32" DbType="Int" />
+    <ElementType Name="buscarClientesResult">
+      <Column Name="cedulac" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="numero" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="correo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.eliminarClientes" Method="eliminarClientes">
+    <Parameter Name="cedulac" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insertarClientes" Method="insertarClientes">
+    <Parameter Name="cedulac" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="numero" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="correo" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

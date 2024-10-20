@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BDpeluqueria" Class="ModeloHorarioDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.DisponibilidadH" Member="DisponibilidadH">
+    <Type Name="DisponibilidadH">
+      <Column Name="IdDisponibilidad" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idHorario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HorainicioCorte" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HoraFinCorte" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cedulaP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.buscarHorario" Method="buscarHorario">
+    <Parameter Name="cedulaP" Type="System.Int32" DbType="Int" />
+    <ElementType Name="buscarHorarioResult">
+      <Column Name="IdDisponibilidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idHorario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HorainicioCorte" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HoraFinCorte" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cedulaP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.insertarHorarioP" Method="insertarHorarioP">
+    <Parameter Name="idDisponibilidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idHorario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HorainicioCorte" Parameter="horainicioCorte" Type="System.Int32" DbType="Int" />
+    <Parameter Name="HoraFinCorte" Parameter="horaFinCorte" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cedulaP" Type="System.Int32" DbType="Int" />
+    <Parameter Name="estado" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.actualizarEstado" Method="actualizarEstado">
+    <Parameter Name="Estado" Parameter="estado" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IdDisponibilidad" Parameter="idDisponibilidad" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

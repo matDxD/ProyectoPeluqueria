@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ModeloCorte">
+  <DataContextMoniker Name="/ModeloCorteDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d28b610f-24f9-4af9-bd36-25853ef34e68" absoluteBounds="4.25, 1.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ModeloCorteDataContext/Cortes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="749249bb-cd28-4b0c-8fcc-6481672e530c" absoluteBounds="4.265, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BDpeluqueria" Class="ModeloPDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Peluquero" Member="Peluquero">
+    <Type Name="Peluquero">
+      <Column Name="cedulaP" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="numero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="direccion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ncortes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.actualizarEmpleado" Method="actualizarEmpleado">
+    <Parameter Name="cedulaP" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="numero" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="direccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Ncortes" Parameter="ncortes" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.buscarEmpleado" Method="buscarEmpleado">
+    <Parameter Name="cedulaP" Type="System.Int32" DbType="Int" />
+    <ElementType Name="buscarEmpleadoResult">
+      <Column Name="cedulaP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="numero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="direccion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ncortes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.eliminarPeluquero" Method="eliminarPeluquero">
+    <Parameter Name="cedulaP" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insertarEmpleado" Method="insertarEmpleado">
+    <Parameter Name="cedulaP" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="numero" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="direccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Ncortes" Parameter="ncortes" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.actualizarNcorte" Method="actualizarNcorte">
+    <Parameter Name="cedulaP" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Ncortes" Parameter="ncortes" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
